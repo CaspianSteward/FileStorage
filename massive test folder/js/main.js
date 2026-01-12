@@ -1,0 +1,57 @@
+function initialize(){
+    cities();
+};
+
+// define the starting variables (lists?)
+function cities(){
+    var cities = [
+        'Corvallis',
+        'Portland',
+        'Eugene',
+        'Albany'
+    ];
+    var population = [
+        '59,920',
+        '652,500',
+        '104,057',
+        '27,244'
+    ];
+
+
+// making the table and making it look nice?
+    var table = document.createElement("table");
+
+    var headerRow = document.createElement("tr");
+
+    var cityHeader = document.createElement("th");
+    cityHeader.innerHTML = "City";
+    headerRow.appendChild(cityHeader);
+
+    var popHeader = document.createElement("th");
+    popHeader.innerHTML = "Population";
+    headerRow.appendChild(popHeader);
+
+    table.appendChild(headerRow);
+
+// making it repeat for all of the variables
+    for (var i = 0; i < cities.length; i++){
+        var tr = document.createElement("tr");
+
+        var city = document.createElement("td");
+        city.innerHTML = cities[i];
+        tr.appendChild(city);
+
+        var pop = document.createElement("td");
+        pop.innerHTML = population[i];
+        tr.appendChild(pop);
+
+        table.appendChild(tr);
+    };
+
+//adding the table to the html file
+    var myDiv =  document.getElementById("mydiv");
+    myDiv.appendChild(table);
+};
+
+//call the function
+window.onload = initialize();
