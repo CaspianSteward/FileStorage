@@ -18,17 +18,17 @@ function final(){
 	for (var i=0; i < cities.length; i++){
 		var tr = document.createElement("tr");
 		var city = document.createElement("td");
-		city.InnerHTML = cities[i]
+		city.innerHTML = cities[i]
 		tr.appendChild(city);
 		var pop = document.createElement("td");
 		pop.innerHTML = pops[i];
 		tr.appendChild(pop);
 
 table.appendChild(tr);
-};
+	};
 
-var  myDiv = document.getElementById("mydiv");
-myDiv.appendChild(table);
+var  PopulationTable = document.getElementById("tablediv");
+PopulationTable.appendChild(table);
 };
 window.onload = final();
 
