@@ -5,7 +5,9 @@ var car ={
    color: "Red",
    start: function(){
       console.log("vroom vroom its time for school");
+      document.getElementById("cardiv").innerHTML = "vroom vroom its time for school";
    }
 };
 
 car.start();
+
